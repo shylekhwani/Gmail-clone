@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gmail clone</title>
+    <script
+      src="https://kit.fontawesome.com/4d71f0cb93.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="overflow-y-hidden">
+    <div class="container w-screen flex flex-row mx-3 my-1 items-center">
+      <span class="mx-2 mb-5"><i class="fa-solid fa-bars fa-xl"></i></span>
+      <span class="pb-5"
+        ><img
+          class="h-10 w-40"
+          src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
+          alt=""
+      /></span>
+      <div class="w-full mx-36 flex flex-row">
+        <i class="fa-solid fa-magnifying-glass absolute my-3 px-3"></i>
+        <i class="fa-solid fa-sliders absolute my-3 pl-96 ml-72"></i>
+        <input
+          class="w-11/12 h-10 rounded-xl mb-4 bg-slate-200 px-10 py-2"
+          type="text"
+          placeholder="Search mail"
+        />
+      </div>
+      <div class="flex gap-2 mb-3 w-[7%]">
+        <button class="rounded-full hover:bg-gray-200 p-2">
+          <i class="fa-regular fa-circle-question"></i>
+        </button>
+        <button class="rounded-full hover:bg-gray-200 p-2">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        <button class="rounded-full hover:bg-gray-200 p-2">
+          <i class="fa-solid fa-list-ul"></i>
+        </button>
+        <button class="rounded-full hover:bg-gray-200 p-2">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex flex-row justify-start ml-3 border-2 rounded-xl w-fit bg-blue-300 hover:shadow-xl shadow-slate-950"
+    >
+      <button class="h-16 w-36">
+        <i class="fa-solid fa-pen mr-3"></i
+        ><span class="pr-6 mb-3"> Compose</span>
+      </button>
+    </div>
+
+    <div class="flex flex-row w-[100%]">
+      <div class="grid grid-row-2 w-[20%]">
+        <div class="w-fit mx-5 my-2 text-start">
+          <ul>
+            <li
+              class="my-2 bg-blue-200 w-48 rounded-xl px-2 hover:bg-blue-300 rounded-xl"
+            >
+              <a href="#"
+                ><i class="fa-solid fa-hard-drive pr-2"></i
+                ><span class="mx-2.5"> Inbox</span></a
+              >
+            </li>
+            <li class="my-2 px-2 hover:bg-slate-200 rounded-xl">
+              <a href="#"
+                ><i class="fa-regular fa-star pr-1"></i
+                ><span class="mx-3"> Starred</span></a
+              >
+            </li>
+            <li class="my-2 px-2 hover:bg-slate-200 rounded-xl">
+              <a href="#"
+                ><i class="fa-regular fa-clock pr-2"></i
+                ><span class="mx-2"> Snoozed</span></a
+              >
+            </li>
+            <li class="my-2 px-2 hover:bg-slate-200 rounded-xl">
+              <a href="#"
+                ><i class="fa-solid fa-paper-plane pr-2"></i
+                ><span class="mx-2"> Sent</span></a
+              >
+            </li>
+            <li class="my-2 px-2 hover:bg-slate-200 rounded-xl">
+              <a href="#"
+                ><i class="fa-solid fa-file pr-2"></i
+                ><span class="mx-3"> Drafts</span></a
+              >
+            </li>
+            <li
+              class="my-2 px-2 bg-slate-200 rounded-xl w-48 hover:bg-slate-200"
+            >
+              <a href="#"
+                ><i class="fa-solid fa-angle-down pr-2"></i
+                ><span class="mx-2.5"> More</span></a
+              >
+            </li>
+          </ul>
+          <div class="flex py-3 pl-3">
+            <p class="text-lg font-semibold">Labels</p>
+            <button class="grid rounded-full hover:bg-slate-200 p-2">
+              <i class="fa-solid fa-plus ml-20"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[80%]">
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+        <div
+          class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6"
+        >
+          <div
+            class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1"
+          >
+            <div
+              class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden"
+            >
+              <input type="checkbox" name="" id="" />
+            </div>
+            <button
+              class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"
+            >
+              <i class="fa-regular fa-star"></i>
+            </button>
+            <p class="text-black ml-1">PW Skills</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between"
+          >
+            <div
+              class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap"
+            >
+              <p class="text-black font-semibold">
+                Assignment Graded for course Full Stack Web Development
+              </p>
+              <p class="text-black mx-2">
+                Hello Yash, Your assignment (22 Oct"23 Tailwind CSS Assignment )
+                has been graded from PW Skills. Check below to see your score
+                and comments from your mentor.
+              </p>
+            </div>
+            <p class="w-[2%]">...</p>
+          </div>
+
+          <div
+            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]"
+          >
+            <p>07:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
